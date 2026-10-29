@@ -47,7 +47,7 @@ public abstract class AbstractSupportRequest {
 					);
 		}
 	}
-	private void validatebasePoints(int requestBasePoints) {
+	private void validateBasePoints(int requestBasePoints) {
 		if (requestBasePoints <= 0) {
 			throw new IllegalArgumentException(
 					"Exception! base point must be greater than zero."
