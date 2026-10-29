@@ -12,19 +12,17 @@ public class AbstractSupportRequest {
 		if (requestId <= 0) {
 			throw new IllegalArgumentException("Exception: id must be greater than zero.");
 		}	
+	}
 	void final validateTitle(String requestTitle) {
 		if (requestTitle == "" || requestTitle = null) {
 			throw new IllegalArgumentException("Exception: title must not be null or blank.");
 		}
+	}
 	void final validate basePoints(int requestBasePoints) {
 		if (requestBasePoints <= 0) {
 			throw new IllegalArgumentException("Exception! base point must be greater than zero.");
 		}
 	}
-	}
-	}
 	
-	// Must update the request's resolved state
-	// Award service points to the technician
-	// Return the number of service points awar
+
 }
