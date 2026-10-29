@@ -1,6 +1,6 @@
 package edu.mu.cmpsc3330.assignment2;
 
-public abstract class AbstractSupportRequest {
+public abstract class AbstractSupportRequest implements SupportRequest {
 	// Author: Brooks Sonethongkham
 	private int id;
 	private String title;
