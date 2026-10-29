@@ -1,11 +1,25 @@
 xpackage edu.mu.cmpsc3330.assignment2;
 
-public class AbstractSupportRequest {
+public abstract class AbstractSupportRequest {
 	// Author: Brooks Sonethongkham
-	int id;
-	String title;
-	int basePoints;
-	boolean resolved;
+	private int id;
+	private String title;
+	private int basePoints;
+	private boolean resolved;
+	
+	// Common getters
+	int final getId() {
+		return this.id;
+	}
+	String final getTitle() {
+		return this.title;
+	}
+	int final getBasePoints() {
+		return this.basePoints;
+	}
+	boolean final isResolved() {
+		return this.resolved;
+	}
 	
 	// Required invariants
 	void final validateId(int requestId) {
@@ -14,7 +28,7 @@ public class AbstractSupportRequest {
 		}	
 	}
 	void final validateTitle(String requestTitle) {
-		if (requestTitle == "" || requestTitle = null) {
+		if (requestTitle.equals("") || requestTitle == null) {
 			throw new IllegalArgumentException("Exception: title must not be null or blank.");
 		}
 	}
