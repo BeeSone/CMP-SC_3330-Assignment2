@@ -1,4 +1,4 @@
-xpackage edu.mu.cmpsc3330.assignment2;
+package edu.mu.cmpsc3330.assignment2;
 
 public abstract class AbstractSupportRequest {
 	// Author: Brooks Sonethongkham
