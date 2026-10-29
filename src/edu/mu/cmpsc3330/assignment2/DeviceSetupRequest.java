@@ -18,9 +18,8 @@ public class DeviceSetupRequest extends AbstractSupportRequest{
 		if(technician == null){
 			throw new IllegalArgumentException("technician cannot be null");
 		}
-		resolveTicket();//Should be a class from the parent and handle a double resolution through there
 		int totalPoints = getBasePoints()*deviceCount;
-		technician.addPoints(totalPoints);
+		resolveTicket(technician, totalPoints);//Should be a class from the parent and handle a double resolution through there
 		return totalPoints;
 	}
 }

@@ -34,6 +34,19 @@ public abstract class AbstractSupportRequest {
 		return this.resolved;
 	}
 	
+	//Shared functionality
+	protected final void resolveTicket(Technician technician, int totalPoints) {
+		if(technician == null){
+			throw new IllegalArgumentException("technician cannot be null");
+		}
+		if(this.resolved == true) {
+			throw new IllegalStateException("A ticket cannot be resolved twice");
+		} else {
+			technician.addPoints(totalPoints);
+			this.resolved = true;
+		}
+	}
+	
 	// Required invariant validation functions (updated to void, because nothing outside of this function's constructor will use them)
 	private void validateId(int requestId) {
 		if (requestId <= 0) {
