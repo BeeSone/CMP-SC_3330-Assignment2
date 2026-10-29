@@ -18,7 +18,7 @@ public class AbstractSupportRequest {
 			throw new IllegalArgumentException("Exception: title must not be null or blank.");
 		}
 	}
-	void final validate basePoints(int requestBasePoints) {
+	void final validatebasePoints(int requestBasePoints) {
 		if (requestBasePoints <= 0) {
 			throw new IllegalArgumentException("Exception! base point must be greater than zero.");
 		}
