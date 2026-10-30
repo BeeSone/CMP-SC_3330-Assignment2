@@ -21,17 +21,41 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 		this.resolved = false;
 	}
 	// Common getters
+	@Override
 	public final int getId() {
 		return this.id;
 	}
+	@Override
 	public final String getTitle() {
 		return this.title;
 	}
+	@Override
 	public final int getBasePoints() {
 		return this.basePoints;
 	}
+	@Override
 	public final boolean isResolved() {
 		return this.resolved;
+	}
+	protected void markResolved() {
+		if(resolved) {
+			throw new IllegalStateException(
+			"Request has already been resolved.");
+		}
+		resolved = true;
+	}
+	
+	@Override
+	public abstract int resolveFor(Technician technician);
+	
+	// A useful toString():
+	
+	public String toString() {
+		return "Request id: " + id 
+				+ ", Title: " + title
+				+ ", Base Points: "
+				+ basePoitns
+				+ ", Resolved status: " + resolved;
 	}
 	
 	//Shared functionality
