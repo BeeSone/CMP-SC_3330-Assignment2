@@ -53,8 +53,7 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 	public String toString() {
 		return "Request id: " + id 
 				+ ", Title: " + title
-				+ ", Base Points: "
-				+ basePoitns
+				+ ", Base Points: " + basePoints
 				+ ", Resolved status: " + resolved;
 	}
 	
