@@ -37,19 +37,11 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 	public final boolean isResolved() {
 		return this.resolved;
 	}
-	protected void markResolved() {
-		if(resolved) {
-			throw new IllegalStateException(
-			"Request has already been resolved.");
-		}
-		resolved = true;
-	}
-	
 	@Override
 	public abstract int resolveFor(Technician technician);
 	
 	// A useful toString():
-	
+	@Override
 	public String toString() {
 		return "Request id: " + id 
 				+ ", Title: " + title
@@ -57,7 +49,7 @@ public abstract class AbstractSupportRequest implements SupportRequest {
 				+ ", Resolved status: " + resolved;
 	}
 	
-	//Shared functionality
+	//A ticket cannot be resolved twice
 	protected final void resolveTicket(Technician technician, int totalPoints) {
 		if(technician == null){
 			throw new IllegalArgumentException("technician cannot be null");
