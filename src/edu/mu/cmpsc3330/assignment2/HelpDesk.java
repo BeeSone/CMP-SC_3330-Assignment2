@@ -38,7 +38,7 @@ public class HelpDesk {
         }
         SupportRequest request = findRequest(requestId);
         if(request == null){
-            throw new IllegalArgumentException("RequestId cannot be null");
+            throw new IllegalArgumentException("RequestId cannot be found");
         }
         if(request.isResolved()){
             throw new IllegalArgumentException("Resolved ticket cannot be assigned");
@@ -49,6 +49,7 @@ public class HelpDesk {
             assignments.put(technician, techRequests);
         }
         if(techRequests.contains(request)){
+        	// A request cannot be assigned to the same technician twice
             throw new IllegalArgumentException("Request is already assigned to this technician");
         } else {
         	// A request can only be assigned to one technician.
