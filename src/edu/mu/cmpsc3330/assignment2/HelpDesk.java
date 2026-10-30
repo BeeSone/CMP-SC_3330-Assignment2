@@ -21,7 +21,7 @@ public class HelpDesk {
         int id = request.getId();
 
         if(requestsById.containsKey(id)){
-            throw new IllegalArgumentException("Request ID" + id + "already exist");
+            throw new IllegalArgumentException("Request ID " + id + " already exist");
         }
         requestsById.put(id, request);
     }
@@ -50,6 +50,15 @@ public class HelpDesk {
         }
         if(techRequests.contains(request)){
             throw new IllegalArgumentException("Request is already assigned to this technician");
+        } else {
+        	// A request can only be assigned to one technician.
+        	for (List<SupportRequest> existingRequests  : assignments.values()) {
+        	    if (existingRequests.contains(request)) {
+        	        throw new IllegalArgumentException(
+        	            "Request is already assigned to another technician"
+        	        );
+        	    }
+        	}
         }
         techRequests.add(request);
     }
