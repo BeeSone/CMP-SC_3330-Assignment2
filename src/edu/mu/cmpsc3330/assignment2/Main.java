@@ -39,7 +39,7 @@ public class Main {
         helpDesk.assignRequest(tech1, 3);
         helpDesk.assignRequest(tech1, 2);
         
-        helpDesk.assignRequest(tech3, 4);
+        helpDesk.assignRequest(tech2, 4);
         helpDesk.assignRequest(tech2, 5);
 
         // tech3 has the same name as tech1.
