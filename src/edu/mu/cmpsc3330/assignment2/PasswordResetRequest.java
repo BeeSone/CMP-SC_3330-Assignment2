@@ -6,10 +6,13 @@ public class PasswordResetRequest extends AbstractSupportRequest{
 	public PasswordResetRequest(int id, String title, int basePoints, String accountName) {
 		super(id, title, basePoints);//Passes the parameters to the required parent class variables
 		
+		// vv REMOVED: already included in AbstractSupportRequest vv
+		/*
 		if(accountName == null || accountName.isBlank()) {
 			throw new IllegalArgumentException("accountName cannot be blank or null");
 		}
-		
+		*/
+		// ^^ REMOVED: already included in AbstractSupportRequest ^^
 		this.accountName = accountName;
 	}
 	
