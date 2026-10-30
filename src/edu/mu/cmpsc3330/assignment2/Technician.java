@@ -28,6 +28,7 @@ public class Technician {
 		return this.name;
 	}
 	
+	@Override
 	public String toString() {
 		return "Name: " + this.name + ", Service Points: " + this.servicePoints;
 	}

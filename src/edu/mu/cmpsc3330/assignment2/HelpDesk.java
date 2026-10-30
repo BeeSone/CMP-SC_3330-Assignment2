@@ -38,7 +38,7 @@ public class HelpDesk {
         }
         SupportRequest request = findRequest(requestId);
         if(request == null){
-            throw new IllegalArgumentException("RequestId cannot be found");
+            throw new IllegalArgumentException("RequestId cannot be found, id: " + requestId);
         }
         if(request.isResolved()){
             throw new IllegalArgumentException("Resolved ticket cannot be assigned");
