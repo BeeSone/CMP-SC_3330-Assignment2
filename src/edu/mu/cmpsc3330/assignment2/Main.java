@@ -70,7 +70,7 @@ public class Main {
         System.out.println("Request 5 awarded " + helpDesk.resolveRequest(tech2, 5) + " points.");
 
         // Print all requests
-        System.out.println("\n");
+        System.out.println("");
         helpDesk.printAllRequests();
 
         // Print technician assignments
@@ -92,8 +92,10 @@ public class Main {
         technicians.add(tech1);
         technicians.add(tech2);
 
-        System.out.println("\nTotal Service Points: "
-            + HelpDeskUtil.sumPoints(technicians));
+        System.out.println("\nTotal Service Points: "+ HelpDeskUtil.sumPoints(technicians));
+        
+        System.out.println("\nUsing HelpDeskUtil.printAll(technicians)");
+        HelpDeskUtil.printAll(technicians);
 
         // Demonstrate exception handling
         System.out.println("\n===== Testing Invalid Operations =====");
