@@ -6,3 +6,5 @@ Group: Gavin Yeon, Brooks Sonethongkham, Dimitri Nguyen
 Github Link: https://github.com/BeeSone/CMP-SC_3330-Assignment2.git
 
 IDE used: Eclipse IDE
+
+Note: Invalid operation were tested using try-catch and can be found tested last in the main demo
