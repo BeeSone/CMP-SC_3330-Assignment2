@@ -2,7 +2,7 @@ package edu.mu.cmpsc3330.assignment2;
 
 public class Technician {
 	private final String name;
-	private int servicePoints;
+	private int servicePoints = 0;
 	
 	public Technician(String name) {
 		if(name == null || name.isBlank()) {
